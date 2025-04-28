@@ -17,7 +17,6 @@ nice ambient light, which can be further modified to your needs.
 
 > [!CAUTION]
 > This is still work in progress (as documentation).
-> Some files are missing such as distance pegs and hanging mount point.
 
 ![quake logo light](images/preview_small_light-fs8.png)
 
@@ -41,9 +40,14 @@ as base vector for the logo.
 * See [STL](stl/Quake_Logo.stl) for full STL file for a logo
 from above with specific height (10mm).
 * For 3d print you probably need to cut it into pieces which can be assembled.
-* See [stl/prusa,mini](stl/prusa.mini/) for Prusa Mini specific STL files.
-* See [stl/connectors](stl/connectors.stl) for flat connectors to be used
+* See [stl/prusa,mini/](stl/prusa.mini/) for Prusa Mini specific STL files.
+
+* See [stl/connectors.stl](stl/connectors.stl) for flat connectors to be used
   to glue items together.
+* See [stl/distance_peg.stl](stl/distance_peg.stl) to be printed 3 times and
+  attached in 3 points so the logo touches wall in 3 points
+* See [stl/hanger.stl](stl/hanger.stl) to be printed and glued in the top center
+  so that you can hang the logo on the wall.
 
 ## 3D print
 
@@ -170,10 +174,7 @@ Total: Plan about 1h per day over a week
 * print the glue pads
 * print connector set
 * print 3 x distance pins
-* print hanging mount point
-* TODO: add distance pegs models
-* TODO: add hanging mount point
-* TODO: check best wall mount distance, now it is 1 cm or something
+* print hanger
 
 > [!Tip]
 > During print of the 3d elements on the 3D printer it is a great time to
@@ -211,7 +212,7 @@ Sanding elements is needed to make sure glue sticks better.
 * on the end of the thin Q elements and the bottom of the extension
   of the Q letter attach distance pegs 2 on the top sides, 1 on the bottom,
   so that logo can rest against the wall on in three points
-* at the center of the Q element attach hanging mount point,
+* at the center of the Q element attach hanger,
   make sure this one is well attached,
   or drill through hole to attach it to the wall
 
@@ -300,7 +301,9 @@ Transfer logo with leds to the target location and attach it to the wall.
 In WLED settings, set led limit to 30, maximum power draw 0.7A.
 Then export the config and start to play with the effects.
 
-TODO: add saved wled config/presets... i think I have it somewhere...
+See [wled/wled_presets.json](wled/wled_presets.json) for example presets,
+also usable with other strips - for example Easter LED light in the shape
+of a bunny or Xmas led light, using COB leds.
 
 Enjoy.
 
@@ -309,3 +312,9 @@ Enjoy.
   ![QWLAN 2024 red](images/qwlan2024_red-fs8.png)
 
   ![QWLAN 2024 pink](images/qwlan2024_pink-fs8.png)
+
+PS:
+
+WLED presets after parsing via `jq` [pretty format](wled/wled_presets_pretty.json)
+but not sure if wled is able to load multiline json file, though it is easier to
+read it online :)
