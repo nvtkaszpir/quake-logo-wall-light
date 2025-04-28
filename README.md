@@ -5,12 +5,18 @@ Quake logo as a wall light ornament.
 nice ambient light, which can be further modified to your needs.
 
 > [!IMPORTANT]
-> **PLEASE READ CAREFULLY INSTRUCTIONS BEFORE DOING ANYYTHING**
+> **PLEASE READ CAREFULLY INSTRUCTIONS BEFORE DOING ANYTHING**
+>
+> Also reading it again the next day really helps :)
+> Moreover reading WLED project documentation provides massive amount of
+> extra details.
+>
+> It is important to read the doc before buying anything.
 
-It is very important to read the doc before buying anything.
+`...huh over 6h of writing docs...`
 
 > [!CAUTION]
-> This is still work in progress (as documentation)
+> This is still work in progress (as documentation).
 > Some files are missing such as distance pegs and hanging mount point.
 
 ![quake logo light](images/preview_small_light-fs8.png)
@@ -36,7 +42,7 @@ as base vector for the logo.
 from above with specific height (10mm).
 * For 3d print you probably need to cut it into pieces which can be assembled.
 * See [stl/prusa,mini](stl/prusa.mini/) for Prusa Mini specific STL files.
-* See [stl/connectors](stl/connectors.stl) for flat **connectors** to be used
+* See [stl/connectors](stl/connectors.stl) for flat connectors to be used
   to glue items together.
 
 ## 3D print
@@ -246,6 +252,11 @@ have electronics attached to it.
 
 ## Attaching leds to the logo
 
+Logo light consists of 4 led strips connected in the central point.
+Those strips are later cut into smaller pieces, but in certain situations and
+assembly it could be preserved as longer uncut parts, you may just need to adjust
+the number of leds and the light effect you want to get.
+
 * cut strip into 10 led parts (or about 5cm parts), make sure to mark directions
   of the led strips and where is power and ground and colors per strip
 
@@ -289,7 +300,7 @@ Transfer logo with leds to the target location and attach it to the wall.
 In WLED settings, set led limit to 30, maximum power draw 0.7A.
 Then export the config and start to play with the effects.
 
-TODO: add saved wled config/presets.
+TODO: add saved wled config/presets... i think I have it somewhere...
 
 Enjoy.
 
