@@ -1,9 +1,4 @@
 {
-    "ignorePatterns": [
-        {
-            "pattern": "^https://www.printables.com/"
-        }
-    ],
     "httpHeaders": [
         {
             "urls": [

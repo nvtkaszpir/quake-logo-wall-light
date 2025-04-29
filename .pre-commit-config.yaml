@@ -41,7 +41,7 @@ repos:
   - id: markdown-link-check
     name: Markdown Link Check
     description: Extracts links from markdown texts and checks they're all alive (i.e. return status 200 OK).
-    entry: markdown-link-check
+    entry: env NODE_OPTIONS=--max-http-header-size=32768 markdown-link-check
     args: [ "--config", "markdown_link_check_config.json"]
     language: node
     types: [markdown]
