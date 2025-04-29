@@ -28,6 +28,9 @@ nice ambient light, which can be further modified to your needs.
 
 Last picture is copyrighted by [Thunder](https://www.quakeworld.nu/wiki/Thunder)
 
+Please download and add like on [printables.com/model/1062690-quake-logo-wall-light](https://www.printables.com/model/1062690-quake-logo-wall-light).
+Thanks in advance!
+
 # Bill of Materials
 
 Generally you need at least 60 USD to make it without post-processing.

@@ -1,21 +1,13 @@
 {
     "ignorePatterns": [
         {
-            "pattern": "^https://www.raspberrypi.com"
-        },
-        {
-            "pattern": "^https://forums.raspberrypi.com"
-        },
-        {
-            "pattern": "^quay.io/kaszpir/prusa-connect-script"
+            "pattern": "^https://www.printables.com/"
         }
     ],
     "httpHeaders": [
         {
             "urls": [
-                "https://docs.github.com/",
-                "https://www.raspberrypi.com",
-                "https://www.raspberrypi.com/products/camera-module-v2/"
+              "https://docs.github.com/"
             ],
             "headers": {
                 "Accept-Encoding": "br, gzip, deflate"
