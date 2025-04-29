@@ -4,6 +4,8 @@ Quake logo as a wall light ornament.
 3d printed logo with leds underneath, which glows towards the wall making
 nice ambient light, which can be further modified to your needs.
 
+![preview](images/preview.gif)
+
 > [!IMPORTANT]
 > **PLEASE READ CAREFULLY INSTRUCTIONS BEFORE DOING ANYTHING**
 >
