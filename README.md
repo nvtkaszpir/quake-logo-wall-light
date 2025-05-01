@@ -1,8 +1,10 @@
 # quake-logo-wall-light
 
 Quake logo as a wall light ornament.
-3d printed logo with leds underneath, which glows towards the wall making
+3D printed logo with leds underneath, which glows towards the wall making
 nice ambient light, which can be further modified to your needs.
+
+Size about just under 95×70x1cm (3cm with mount pegs).
 
 ![preview](images/preview.gif)
 
@@ -37,14 +39,14 @@ Generally you need at least 60 USD to make it without post-processing.
 
 ## Logo
 
-You can make a logo from 3d print or laser or whatever you like.
+You can make a logo from 3D print or laser or whatever you like.
 Source.
 
 * See [source svg](images/source/quake_logo_black_transparent.svg),
 as base vector for the logo.
 * See [STL](stl/Quake_Logo.stl) for full STL file for a logo
 from above with specific height (10mm).
-* For 3d print you probably need to cut it into pieces which can be assembled.
+* For 3D print you probably need to cut it into pieces which can be assembled.
 * See [stl/prusa,mini/](stl/prusa.mini/) for Prusa Mini specific STL files.
 
 * See [stl/connectors.stl](stl/connectors.stl) for flat connectors to be used
@@ -56,8 +58,8 @@ from above with specific height (10mm).
 
 ## 3D print
 
-* for 3d print - 500g of filament for 3d printer
-  (depends on the scale, assuming original 80×90cm),
+* for 3D print - under 500g of filament for 3D printer
+  (depends on the scale, assuming original size),
   so you should be good with one spool of the filament of your choice
   color - whatever you like;
 
@@ -65,7 +67,7 @@ from above with specific height (10mm).
 
 * 20ml universal plastic glue, can be superglue, or 2 part epoxy,
   just double check it is able to glue the logo base you have chosen,
-  the best if the glue melts 3d printed plastic.
+  the best if the glue melts 3D printed plastic.
 
   optionally you could use hot glue, especially for glueing leds to the logo
 
@@ -94,10 +96,16 @@ so the width is 80cm and heights over 1m.
 ## Electronic parts
 
 * esp8266 or esp32 device supported by [WLED project](https://kno.wled.ge/basics/compatible-controllers/)
+  I recommend devices with separate power control board, which can be fed 5V to the
+  usb port. Example ESP32 D1 mini or ESP32 DevKitC v4 with USB-C.
+  Or get a ready-made board with screwable cable ports (the green connectors).
+
   price: ~ 6 USD
 
-* 5V [100 addressable LEDS](https://kno.wled.ge/basics/compatible-led-strips/)
-  in a strip which can be cut with scissors,
+* 5V [100 addressable LEDS strips](https://kno.wled.ge/basics/compatible-led-strips/),
+  3 channel RGB recommended, strip can be cut with scissors in marked spots,
+  the more leds dense the better but generally you probably need about 2m of
+  the led strip with over 60 leds/m for a better effect
 
   price: ~ 15 USD
 
@@ -106,6 +114,14 @@ so the width is 80cm and heights over 1m.
 
 * 1A 5V USB power adapter or better, usually old power charger for the phone
   is sufficient, the best if it has USB-A port in it.
+
+  [power calculator](https://wled-calculator.github.io/) but notice that
+  you rarely have all leds powered on at 100% in all colors, so I suggest 100
+  leds, 50% brightness and usually you have a color mix and not all leds are
+  powered on, then the power consumption will be much lower.
+
+  Also you can limit power in WLED, by default it has 700mA of for overall
+  output - just to be safe on the start.
 
   price: ~ 3 USD
 
@@ -146,7 +162,7 @@ so the width is 80cm and heights over 1m.
 
 For a wall mount:
 
-* 1x M5x50 wall screw or something similar, depends on logo weight
+* 1x M5×50 wall screw or something similar, depends on logo weight
 * 1x dowel for the screw above
 * wall drill + drill (duuh)
 
@@ -161,9 +177,19 @@ For a wall mount:
 Make sure to get a quickly drying spray paint, otherwise post processing
 will take days and not few hours.
 
+## Optional for transport
+
+Stiff picture folder / case for transporting drawings or paintings,
+size A1 or larger (B1 or A0). With A1 format you will probably have to rotate
+the logo to put it diagonally.
+
+Bubble wrap foam for extra protection.
+
+price: ~ 20 USD
+
 # Time needed
 
-* 27h for 3d Print on Prusa Mini, but this depends on your printer profile etc
+* 27h for 3D Print on Prusa Mini, but this depends on your printer profile etc
 * 1h of soldering of cables and LED strips
 * 1h uploading WLED firmware to the esp32 from scratch
 * post-processing - depends on what you want
@@ -174,15 +200,19 @@ Total: Plan about 1h per day over a week
 
 ## 3D printing
 
-* print the parts, 5% infill should be enough, just use 4 perimeters if you need
-  better postprocessing
-* print the glue pads
+Settings recommendations:
+
+* infill - rectilinerar 5% infill should be enough
+* use 4 perimeters  and 4 or 5 top/down layers if you need extra strength
+  and extra material for postprocessing such as sanding
+
+* print the parts
 * print connector set
 * print 3 x distance pins
 * print hanger
 
 > [!Tip]
-> During print of the 3d elements on the 3D printer it is a great time to
+> During print of the 3D elements on the 3D printer it is a great time to
 > do electronics, see below.
 
 ## Generic cutting
@@ -192,21 +222,36 @@ Make sure to protect it from all sides from corrosion.
 
 ## Logo assembly
 
-Below assumes you have printed the parts on 3d printer.
+Below assumes you have printed the parts on 3D printer.
 Sanding elements is needed to make sure glue sticks better.
 
-* place all parts on the flat surface upside down, such as table
+* Sand the flat edges of the elements where elements will be put together,
+  notice that sometimes just gluing without connectors underneath will cause
+  the perimeters to break, especially when doing postprocessing T_T.
+  So you REALLY want to have those connectors
+
+* Prepare large flat surface, such as table, cover it with papers to protect it
+  from damage such as knife, sanding, paper, spray paint etc
+* Place all parts on the flat surface upside down, you can use a pen marker to
+  add marks which parts should be together, which is important if the glue has
+  short working time after preparation ( two-component epoxy for example)
 * use sand paper to matte fragments on the flat surface of the logos (about 2x2cm)
-* place adjacent items close together
+* place adjacent items close together before gluing to know how much space it takes
 * from the connectors set - choose one which suits best for the given dimensions
 * use sand paper to matte one side of the connector
 * place the connector on the adjacent elements - if it is small enough then it fits
 * use sand paper to matte to matte the side of the connector
+* apply glue on the sides of the logo which will stick together,
+  squeeze them together a bit, remove extra glue that seeps out,
+  notice that the paper underneath will stick to it so minimal post process
+  to remove it will be required (you can see on the photo below thin white
+  strips on the plastic because of it)
 * apply a bit of glue on the matted fragments of the items and the matted side
   of the connector
 * press glued side of the connector to the matted glued side of the items
-* apply the force on the connector against the items so it will bins,
-  you can just place a paper sheet over it and a glass with cold water
+* apply the force on the connector against the items so it will bind,
+  you can just place a paper sheet over it and a glass with cold water,
+  or heavy mugs
 
   ![logo assembly top](images/logo_assembly_1_top-fs8.png)
   ![logo assembly bottom](images/logo_assembly_2_bottom-fs8.png)
@@ -303,7 +348,9 @@ the number of leds and the light effect you want to get.
 
 Transfer logo with leds to the target location and attach it to the wall.
 
-In WLED settings, set led limit to 30, maximum power draw 0.7A.
+In WLED settings, set led limit to 40, maximum power draw 0.7A -
+this depends on the number of leds and power adapter.
+
 Then export the config and start to play with the effects.
 
 See [wled/wled_presets.json](wled/wled_presets.json) for example presets,
