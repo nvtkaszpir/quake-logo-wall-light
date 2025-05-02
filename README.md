@@ -207,7 +207,10 @@ Settings recommendations:
 
 * infill - rectilinerar 5% infill should be enough
 * use 4 perimeters  and 4 or 5 top/down layers if you need extra strength
-  and extra material for postprocessing such as sanding
+  and extra material for postprocessing such as sanding,
+  for everything **except the hanger** - increasing layer height significantly
+  shortens print time duration, so with 0.4 nozzle I recommend layer height
+  0.32, which is a recommended 60% of the nozzle diameter.
 
 * print the parts
 * print connector set
