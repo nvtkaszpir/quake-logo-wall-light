@@ -76,7 +76,10 @@ from above with specific height (10mm).
 ## Other cutting methods
 
 * 100×100×3mm wood or other material of your choice
-  prince: depends on material, usually you pay for path length of the logo
+  prince: depends on material, usually you pay for path length,
+  so it would be a length of the logo outline, and the price depend on the
+  cutting method (water/laser/plasma) and the depth of the material etc.
+  Original SVG has path length of about 201 cm.
 
 You can just print logo on the paper and glue it to the material and cut it with
 for example wood jigsaw.
